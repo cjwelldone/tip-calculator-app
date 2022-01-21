@@ -1,37 +1,57 @@
+//focus on initial tip value
+//https://stackoverflow.com/questions/52707480/html-button-selected-by-default/52707559
+// open modal // Data Attributes
+//https://blog.webdevsimplified.com/2020-10/javascript-data-attributes/
+
 const billInput = document.querySelector('.billInput');
-const tipInput = document.querySelector('.tipInput');
-const peopleInput = document.querySelector('.people');
+const tipInputCustom = document.getElementById('custom');
+const peopleInput = document.querySelector('.peopleInput');
 const tipAmountOutputField = document.querySelector('.tipAmount');
 const totalAmountOutputField = document.querySelector('.totalAmount');
 const resetButton = document.querySelector('.reset');
 const tipInputButtons = document.querySelectorAll('[data-tip]');
 
-tipInputButtons.forEach(button =>{
-    button.addEventListener('click', () =>{
-        tipValue= button.dataset.tip;
-        console.log(tipValue)
-    })
-    
-})
+
 
 //initial values for bill, tip, people
 let bill = 0;
 /* let bill = Number(billInput.value); */
-let tip = Number(tipInput.value);
+let tip = 0; //Number(tipInput.value);
 let people = 1;
 
-
 billInput.addEventListener('input', updateBillAmount)
-//tipInput.addEventListener('input', updateTipAmount)
 peopleInput.addEventListener('input', updatePeopleAmount)
 resetButton.addEventListener('click', resetAll)
 
-/* update the amount of tip based on the button clicked */
-function updateTipAmount(e) {
+/* update the amount of tip based on the button clicked - deprecated - with input tag element*/
+/* function updateTipAmount(e) {
     //updates the tip value
     tip = Number(e.target.value)
     tipCalculator(bill, tip, people);
-}
+} */
+
+/* update the amount of tip based on the button clicked with buttons*/
+tipInputButtons.forEach(button =>{
+    button.addEventListener('click', () =>{
+        /* get the tipvalue */
+        tipValue= button.dataset.tip;
+        const modal = document.getElementById(tipValue)
+        
+        /* check if input custom is true  */
+        if (tipValue == 'custom') {
+            //open ModalBox and get the customtipAmount 
+            modal.classList.add("show")
+            tipInputCustom.addEventListener('input', (e) =>{
+                console.log(e.target.value);
+                tip = Number(e.target.value);
+                tipCalculator(bill, tip, people);
+            })  
+        } else {
+            tip = Number(tipValue)
+        }
+        tipCalculator(bill, tip, people);
+    })
+})
 
 /* update the amount of bill based on the bill input field */
 function updateBillAmount(e) {
@@ -56,10 +76,11 @@ function tipCalculator (bill, tip, people) {
 /*  Clear all fields and start new */
 function resetAll() {
     billInput.value = '';
-    tipInput.value = ''; 
     peopleInput.value = '';
     tipAmountOutputField.textContent = '';
     totalAmountOutputField.textContent = '';
+    const modal = document.querySelector('.modal');
+    modal.classList.remove("show");
     people = 1;
-    tip = Number(tipInput.value)
+    
 }

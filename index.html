@@ -3,58 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./assets/style.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    body {background-color: blue; margin: auto 0}
-    main{display: flex; flex-direction: row; gap: 2rem; justify-content: center; background-color: white; width: 600px; border-radius: .9rem; padding: 2rem;}
-    .input, .output {height: 300px; width: 300px; background-color: aqua; border-radius: .9rem;}
-    .tipInPutCards{display: flex; justify-content: center; gap: 1rem; margin: 3rem}
-    .cardOne, .cardTwo, .cardThree {border: 3px solid springgreen; cursor: pointer;   }
-  </style>
+  
 </head>
 <body>
   <div class="heading">
-    <h1>SPLITTER</h1>
+    <h1>SPLI TTER</h1>
   </div>
   
   <main>
     <div class="input">
-      <label for="input">Bill</label>
-      <input class="billInput" type="number">
-      <br>
-      <label for="tip">Select Tip % </label>
-      <select name="tip"class="tipInput" type="number">
-       <option value="5">5%</option>
-       <option value="10">10%</option>
-       <option selected="selected" value="15">15%</option>
-       <option value="25">25%</option>
-       <option value="50">50%</option>
-       <option value="0">Custom</option>
-      </select>
-      <br>
-      <label for="people">People</label>
-      <input name="people" class="people" type="number">
       
-      <div class="tipInPutCards">
-        <button class="cardOne" data-tip="5">5</button>
-        <button class="cardTwo"  data-tip="10">10</button>
-        <button class="cardThree" data-tip="15">15</button>
+      <div class="billAmount">
+          <p class="inputLabel">Bill</p>
+          <p class="dollarSign">&#36;</p>
+          <input class="billInput" type="number">
       </div>
-
+      <div class="billAmount">
+        <p class="inputLabel">Select Tip %</p>
+      </div>
+      
+    <div class="tipInPutCards">
+      <button class="inputCards" data-tip="5">5%</button>
+      <button class="inputCards"  data-tip="10">10%</button>
+      <button class="inputCards" data-tip="15" autofocus>15%</button>
+      <button class="inputCards" data-tip="25">25%</button>
+      <button class="inputCards" data-tip="50">50%</button>
+      <button class="inputCards" data-tip="custom">Custom</button>
+      <input id="custom" type="number" min="1" max="100" class="modal" placeholder="Custom Tip Amount" >
     </div>
+    <div class="peopleCount">
+      <p class="inputLabel">Number of People</p>
+      <i class="fa fa-user"></i>
+      <input name="people" class="peopleInput" type="number" min="1">
+    </div>
+ 
+    </div>
+    
     <div class="output">
-      <p>Tip Amount / person</p>
-      <p class='tipAmount'></p>
-      <p>Total / person</p>
-      <p class='totalAmount'></p>
-      <button class="reset">Reset</button>
+      <div class="totalRow">
+        <div class="textField">
+          <p class="totalTip">Tip Amount</p>
+          <p class="totalTipPerson">/ person</p>
+        </div>
+        <p class='amountDollar'>&#36;</p>
+        <p class='tipAmount'>00</p>
+      </div>
+      <div class="totalRow">
+        <div class="textField">
+          <p class="totalTip">Total</p>
+          <p class="totalTipPerson">/ person</p>
+        </div>
+        <p class='amountDollar'>&#36;</p>
+        <p class='totalAmount'>00</p>
+      </div>
+      <div class="totalRowButton">
+        <button class="reset">Reset</button>
+      </div>
+      
     </div>
     
   </main>
@@ -68,7 +79,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">CJWellDone</a>.
   </div>
   <script src="./app.js"">  </script>
 </body>

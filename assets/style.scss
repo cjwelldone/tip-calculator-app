@@ -1,0 +1,235 @@
+//Font size (form inputs): 24px
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Space+Mono:wght@400;500;700&display=swap');
+@import 'colors';
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', sans-serif;
+}
+
+//
+input, button {
+    font-family: inherit;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    background-color: var(--LightGrayishCyanOne);
+    margin: 0 auto;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    max-width: 6rem;
+    white-space: initial;
+    font-size: .6rem;
+    color: var(--VeryDarkCyan);
+    letter-spacing: .5rem;
+    margin-bottom: 2rem;
+}
+
+main { 
+    display: flex; 
+    flex-direction: row; 
+    gap: 1rem; 
+    justify-content: center; 
+    background-color: white; 
+    width: 600px; 
+    border-radius: .9rem; 
+    padding: 2rem;
+}
+
+.input, .output {
+    height: 300px; 
+    width: 300px; 
+    border-radius: .9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.output {
+    background-color: var(--VeryDarkCyan);
+    color: var(--DarkLightGreen);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem
+}
+
+.billAmount, .tipInPutCards, .peopleCount {
+    width: 90%;
+}
+
+.tipInPutCards {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr; 
+    gap: .5rem; 
+    position: relative;
+}
+
+.inputCards {
+    color: var(--White); 
+    background-color: var(--VeryDarkCyan); 
+    border-radius: .25rem;
+    box-shadow: none; 
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: .3rem .6rem .3rem .6rem;
+}
+
+.inputCards:hover {
+    background-color: var(--DarkLightGreen); 
+    color: var(--VeryDarkCyan);
+}
+
+.inputCards:focus {
+    background-color: var(--DarkLightGreen); 
+    outline: none;
+    color: var(--VeryDarkCyan);
+}
+
+.modal {
+    display: none;
+}
+
+.show {
+    display: inline-flex;
+}
+
+input {
+  
+}
+
+/* Remove Arrows/Spinners of input field of type number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.inputLabel {
+    color: var(--DarkGrayishCyanOne);
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.billAmount {
+    position: relative;
+}
+
+.dollarSign  {
+    color: var(--DarkGrayishCyanOne);
+    position: absolute;
+    font-size: 1.2rem;
+    top: 1.3rem;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+}
+
+.fa-user  {
+    color: var(--DarkGrayishCyanOne);
+    position: absolute;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+}
+
+.billInput, .peopleInput, .modal {
+    color: var(--VeryDarkCyan);
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: right;
+    padding-right: 0.5rem;
+    border: none; 
+    background-color: var(--LightGrayishCyanTwo); 
+    outline: none;
+    border-radius: .25rem;
+    width: 96%;
+}
+
+.reset {
+    background-color: var(--DarkLightGreen);
+    border: none;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: .5rem;
+    text-transform: uppercase;
+}
+
+.tipAmount, .totalAmount, .amountDollar{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--DarkLightGreen);
+    max-width: 100%;
+    overflow: clip;
+}
+
+.totalTip {
+    margin: 0;
+}
+
+.totalTipPerson {
+    margin: 0;
+    font-size: .7rem;
+}
+
+.textField {
+    flex-grow: 1;
+    font-weight: 800;
+}
+
+.amountDollar {
+    flex-grow: 2;
+    text-align: right;
+}
+
+.totalTip {
+    color: var(--White);
+    font-size: .8rem;
+}
+
+.totalTipPerson {
+    color: var(--DarkGrayishCyanOne);
+}
+
+.totalRow, .totalRowButton {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.totalRowButton {
+    flex-grow: 3;
+}
+
+#custom {
+    background-color: var(--LightGrayishCyanTwo);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    text-align: center;
+    border-radius: .25rem;
+    font-size: 1.2rem;
+}
+
+.tipInPutCards :nth-child(6) {
+    background-color: var(--LightGrayishCyanTwo);
+    color: var(--VeryDarkCyan);
+    font-weight: 800;
+}
+
+.billAmount, .tipInPutCards, .totalRow, .totalRowButton, .totalTip, .totalTipPerson, .peopleCount, .inputLabel, input, .input, .tipAmount, .totalAmount, .amountDollar {
+    //border: 1px solid coral;
+}
