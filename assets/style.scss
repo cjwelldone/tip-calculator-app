@@ -88,27 +88,12 @@ main {
     padding: .3rem .6rem .3rem .6rem;
 }
 
-.inputCards:hover {
-    background-color: var(--DarkLightGreen); 
-    color: var(--VeryDarkCyan);
-}
-
-.inputCards:focus {
-    background-color: var(--DarkLightGreen); 
-    outline: none;
-    color: var(--VeryDarkCyan);
-}
-
 .modal {
     display: none;
 }
 
 .show {
     display: inline-flex;
-}
-
-input {
-  
 }
 
 /* Remove Arrows/Spinners of input field of type number*/
@@ -230,6 +215,26 @@ input::-webkit-inner-spin-button {
     font-weight: 800;
 }
 
+
+/* active states */
+
+.inputCards:hover {
+    background-color: var(--DarkLightGreen); 
+    color: var(--VeryDarkCyan);
+}
+
+.inputCards:focus {
+    //background-color: var(--DarkLightGreen); 
+    outline: none;
+    //color: var(--VeryDarkCyan);
+}
+
+.billInput:focus, .peopleInput:focus {
+    border: 1px solid var(--DarkLightGreen);
+}
+
+
+/* JUST FOR TESTING */
 .billAmount, .tipInPutCards, .totalRow, .totalRowButton, .totalTip, .totalTipPerson, .peopleCount, .inputLabel, input, .input, .tipAmount, .totalAmount, .amountDollar {
     //border: 1px solid coral;
 }

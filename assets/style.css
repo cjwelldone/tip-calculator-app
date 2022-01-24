@@ -135,17 +135,6 @@ main {
   padding: .3rem .6rem .3rem .6rem;
 }
 
-.inputCards:hover {
-  background-color: var(--DarkLightGreen);
-  color: var(--VeryDarkCyan);
-}
-
-.inputCards:focus {
-  background-color: var(--DarkLightGreen);
-  outline: none;
-  color: var(--VeryDarkCyan);
-}
-
 .modal {
   display: none;
 }
@@ -286,4 +275,20 @@ input::-webkit-inner-spin-button {
   color: var(--VeryDarkCyan);
   font-weight: 800;
 }
+
+/* active states */
+.inputCards:hover {
+  background-color: var(--DarkLightGreen);
+  color: var(--VeryDarkCyan);
+}
+
+.inputCards:focus {
+  outline: none;
+}
+
+.billInput:focus, .peopleInput:focus {
+  border: 1px solid var(--DarkLightGreen);
+}
+
+/* JUST FOR TESTING */
 /*# sourceMappingURL=style.css.map */
