@@ -1,6 +1,6 @@
-//Font size (form inputs): 24px
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Space+Mono:wght@400;500;700&display=swap');
 @import 'colors';
+
 html {
     margin: 0;
     padding: 0;
@@ -11,19 +11,14 @@ input, button {
     font-family: inherit;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 body {
     background-color: var(--LightGrayishCyanOne);
     margin: 0 auto;
     width: 100vh;
-    //width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    
 }
 
 .heading {
@@ -239,9 +234,15 @@ input::-webkit-inner-spin-button {
     font-weight: 800;
 }
 
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
 
 /* active states */
-
 .inputCards:hover {
     background-color: var(--DarkLightGreen); 
     color: var(--VeryDarkCyan);
@@ -261,19 +262,6 @@ input::-webkit-inner-spin-button {
 .reset:hover {
     background-color: var(--DarkLightGreen);
 }
-
-/* JUST FOR TESTING */
-/*  .billAmount, .tipInPutCards, .totalRow, main, .totalRowButton, .totalTip, .totalTipPerson, .peopleCount, .inputLabel, input, .input, .tipAmount, .totalAmount, .amountDollar {
-    border: 1px solid coral;
-} */
-
-/* .input, .output, .billAmount, .tipInPutCards, .peopleCount, .inputLabel {
-    border: 1px solid coral;
-} */
-/*
-.errorMessage {
-    border: 1px solid rgb(13, 126, 160);
-} */
 
 @media (max-width: 750px) {
     html {

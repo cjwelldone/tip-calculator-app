@@ -21,15 +21,6 @@ input, button {
   font-family: inherit;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
-}
-
 body {
   background-color: var(--LightGrayishCyanOne);
   margin: 0 auto;
@@ -300,6 +291,15 @@ input::-webkit-inner-spin-button {
   font-weight: 800;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
 /* active states */
 .inputCards:hover {
   background-color: var(--DarkLightGreen);
@@ -322,17 +322,6 @@ input::-webkit-inner-spin-button {
   background-color: var(--DarkLightGreen);
 }
 
-/* JUST FOR TESTING */
-/*  .billAmount, .tipInPutCards, .totalRow, main, .totalRowButton, .totalTip, .totalTipPerson, .peopleCount, .inputLabel, input, .input, .tipAmount, .totalAmount, .amountDollar {
-    border: 1px solid coral;
-} */
-/* .input, .output, .billAmount, .tipInPutCards, .peopleCount, .inputLabel {
-    border: 1px solid coral;
-} */
-/*
-.errorMessage {
-    border: 1px solid rgb(13, 126, 160);
-} */
 @media (max-width: 750px) {
   html {
     overflow: hidden;
