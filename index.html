@@ -7,15 +7,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/style.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
 </head>
 <body>
   <div class="heading">
     <h1>SPLI TTER</h1>
   </div>
-  
   <main>
     <div class="input">
       <div class="billAmount">
@@ -26,25 +22,22 @@
       <div class="billAmount">
         <p class="inputLabel">Select Tip %</p>
       </div>
-      
-    <div class="tipInPutCards">
-      <button class="inputCards" data-tip="5">5%</button>
-      <button class="inputCards"  data-tip="10">10%</button>
-      <button class="inputCards" data-tip="15" autofocus>15%</button>
-      <button class="inputCards" data-tip="25">25%</button>
-      <button class="inputCards" data-tip="50">50%</button>
-      <button class="inputCards" data-tip="custom">Custom</button>
-      <input id="custom" type="number" min="1" max="100" class="modal" >
+      <div class="tipInPutCards">
+        <button class="inputCards" data-tip="5">5%</button>
+        <button class="inputCards"  data-tip="10">10%</button>
+        <button class="inputCards" data-tip="15" autofocus>15%</button>
+        <button class="inputCards" data-tip="25">25%</button>
+        <button class="inputCards" data-tip="50">50%</button>
+        <button class="inputCards" data-tip="custom">Custom</button>
+        <input id="custom" type="number" min="1" max="100" class="modal" >
+      </div>
+      <div class="peopleCount">
+        <p class="inputLabel">Number of People</p>
+        <i class="fa fa-user"></i>
+        <div class="errorMessage"></div>
+        <input name="people" class="peopleInput" type="number" min="0">
+      </div>
     </div>
-    <div class="peopleCount">
-      <p class="inputLabel">Number of People</p>
-      <i class="fa fa-user"></i>
-      <div class="errorMessage"></div>
-      <input name="people" class="peopleInput" type="number" min="0">
-    </div>
- 
-    </div>
-    
     <div class="output">
       <div class="totalRow">
         <div class="textField">
@@ -65,21 +58,11 @@
       <div class="totalRowButton">
         <button class="reset">Reset</button>
       </div>
-      
     </div>
-    
   </main>
-
-
-  
-
-
-
-  
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">CJWellDone</a>.
+    Coded by <a href="https://github.com/cjwelldone">CJWellDone</a>.
   </div>
   <script src="./app.js"">  </script>
 </body>

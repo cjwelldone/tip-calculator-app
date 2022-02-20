@@ -1,8 +1,3 @@
-//focus initial tip value
-//https://stackoverflow.com/questions/52707480/html-button-selected-by-default/52707559
-// open modal // Data Attributes
-//https://blog.webdevsimplified.com/2020-10/javascript-data-attributes/
-
 const billInput = document.querySelector('.billInput');
 const tipInputCustom = document.getElementById('custom'); 
 const peopleInput = document.querySelector('.peopleInput');
@@ -72,7 +67,11 @@ function updatePeopleAmount(e) {
 
 /*  Calculates tip based on user input & updates output fields */
 function tipCalculator (bill, tip, people) {
-    if (people != 0 || tip != 0) {
+    if (people == 0 && bill == 0 && tip > 0) {
+        bill = 0;
+        total = 0;
+        tipAmount = 0;
+    } else if (people != 0 || tip != 0) {
         tipAmount = ((bill / people) * 0.01 * tip);
         total = (bill/people) + tipAmount;
         if (total == Infinity){
@@ -85,7 +84,6 @@ function tipCalculator (bill, tip, people) {
         tipAmount = 0;
         total = bill;
     }
-
     tipAmountOutputField.textContent = tipAmount.toFixed(2);
     totalAmountOutputField.textContent = total.toFixed(2);
 }
