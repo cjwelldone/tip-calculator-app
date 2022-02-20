@@ -18,11 +18,10 @@
   
   <main>
     <div class="input">
-      
       <div class="billAmount">
           <p class="inputLabel">Bill</p>
           <p class="dollarSign">&#36;</p>
-          <input class="billInput" type="number">
+          <input class="billInput" type="number" required>
       </div>
       <div class="billAmount">
         <p class="inputLabel">Select Tip %</p>
@@ -35,12 +34,13 @@
       <button class="inputCards" data-tip="25">25%</button>
       <button class="inputCards" data-tip="50">50%</button>
       <button class="inputCards" data-tip="custom">Custom</button>
-      <input id="custom" type="number" min="1" max="100" class="modal" placeholder="Custom Tip Amount" >
+      <input id="custom" type="number" min="1" max="100" class="modal" >
     </div>
     <div class="peopleCount">
       <p class="inputLabel">Number of People</p>
       <i class="fa fa-user"></i>
-      <input name="people" class="peopleInput" type="number" min="1">
+      <div class="errorMessage"></div>
+      <input name="people" class="peopleInput" type="number" min="0">
     </div>
  
     </div>

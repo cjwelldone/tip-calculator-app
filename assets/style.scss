@@ -18,9 +18,12 @@ body {
     background-color: var(--LightGrayishCyanOne);
     margin: 0 auto;
     width: 100vh;
+    //width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    
 }
 
 .heading {
@@ -59,11 +62,18 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem
+}
+
+.output, .input {
+    gap: .7rem;
 }
 
 .billAmount, .tipInPutCards, .peopleCount {
     width: 90%;
+}
+
+.peopleCount {
+    position: relative;
 }
 
 .tipInPutCards {
@@ -101,10 +111,20 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.inputLabel {
+.inputLabel, .errorMessage {
     color: var(--DarkGrayishCyanOne);
     font-weight: 800;
     margin-bottom: 0.25rem;
+    font-size: .8rem;
+}
+
+.errorMessage {
+ position: absolute;   
+ top: 18%;
+ left: 63%;
+ text-align: right;
+ z-index: 3;
+ color: var(--alertRed);
 }
 
 .billAmount {
@@ -115,7 +135,7 @@ input::-webkit-inner-spin-button {
     color: var(--DarkGrayishCyanOne);
     position: absolute;
     font-size: 1.2rem;
-    top: 1.3rem;
+    top: 16%;
     padding: 0.25rem;
     padding-left: 0.5rem;
 }
@@ -124,7 +144,7 @@ input::-webkit-inner-spin-button {
     color: var(--DarkGrayishCyanOne);
     position: absolute;
     padding: 0.25rem;
-    padding-left: 0.5rem;
+    padding-left: .5rem;
 }
 
 .billInput, .peopleInput, .modal {
@@ -141,7 +161,7 @@ input::-webkit-inner-spin-button {
 }
 
 .reset {
-    background-color: var(--DarkLightGreen);
+    background-color: var(--Primary);
     border: none;
     border-radius: 0.25rem;
     width: 100%;
@@ -152,7 +172,7 @@ input::-webkit-inner-spin-button {
 .tipAmount, .totalAmount, .amountDollar{
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--DarkLightGreen);
+    color: var(--Primary);
     max-width: 100%;
     overflow: clip;
 }
@@ -198,15 +218,21 @@ input::-webkit-inner-spin-button {
 
 #custom {
     background-color: var(--LightGrayishCyanTwo);
+    border: 1px solid var(--DarkLightGreen);
     position: absolute;
-    width: 100%;
-    height: 100%;
+    text-align: right;
+    width: 27%;
+    height: 40%;
+    left: 12.1rem;
+    top: 2.7rem;
     z-index: 3;
-    text-align: center;
+    text-align: right;
     border-radius: .25rem;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
+//custom Styling for custom TipCard
 .tipInPutCards :nth-child(6) {
     background-color: var(--LightGrayishCyanTwo);
     color: var(--VeryDarkCyan);
@@ -222,17 +248,72 @@ input::-webkit-inner-spin-button {
 }
 
 .inputCards:focus {
-    //background-color: var(--DarkLightGreen); 
     outline: none;
-    //color: var(--VeryDarkCyan);
 }
 
 .billInput:focus, .peopleInput:focus {
     border: 1px solid var(--DarkLightGreen);
 }
 
+.peopleInputAlert:focus {
+    border: 1px solid var(--alertRed);
+}
+.reset:hover {
+    background-color: var(--DarkLightGreen);
+}
 
 /* JUST FOR TESTING */
-.billAmount, .tipInPutCards, .totalRow, .totalRowButton, .totalTip, .totalTipPerson, .peopleCount, .inputLabel, input, .input, .tipAmount, .totalAmount, .amountDollar {
-    //border: 1px solid coral;
+/*  .billAmount, .tipInPutCards, .totalRow, main, .totalRowButton, .totalTip, .totalTipPerson, .peopleCount, .inputLabel, input, .input, .tipAmount, .totalAmount, .amountDollar {
+    border: 1px solid coral;
+} */
+
+/* .input, .output, .billAmount, .tipInPutCards, .peopleCount, .inputLabel {
+    border: 1px solid coral;
+} */
+/*
+.errorMessage {
+    border: 1px solid rgb(13, 126, 160);
+} */
+
+@media (max-width: 750px) {
+    html {
+        overflow: hidden;
+    }
+    
+    body {
+        width: 100%;
+    }
+
+    main {
+        width: 330px;
+        flex-wrap: wrap;
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+    }
+
+    .input, .output {
+        width: 100vw;
+        gap: .1rem;
+        height: 100%;
+    }
+
+    .tipInPutCards {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr; 
+    }
+  
+    #custom {
+        width: 45%;
+        height: 26%;
+        left: 51%;
+        top: 70%;
+        z-index: 3;
+        text-align: right;
+        border-radius: .25rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    .totalRowButton {
+        padding-bottom: 1rem;
+    }
 }
