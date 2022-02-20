@@ -38,6 +38,10 @@ body {
   overflow-x: hidden;
 }
 
+label {
+  display: none;
+}
+
 .heading {
   max-width: 6rem;
   white-space: initial;
