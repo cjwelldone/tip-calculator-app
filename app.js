@@ -75,7 +75,7 @@ function tipCalculator (bill, tip, people) {
         tipAmount = ((bill / people) * 0.01 * tip);
         total = (bill/people) + tipAmount;
         if (total == Infinity){
-            total = 0;
+            total = bill;
         }
         if (tipAmount == Infinity){
             tipAmount  = 0;
