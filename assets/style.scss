@@ -30,6 +30,7 @@ label {
     font-size: .6rem;
     color: var(--VeryDarkCyan);
     letter-spacing: .5rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -134,20 +135,18 @@ input::-webkit-inner-spin-button {
     position: absolute;
     font-size: 1.2rem;
     top: 16%;
-    padding: 0.25rem;
-    padding-left: 0.5rem;
+    padding: 3%;
 }
 
 .fa-user  {
     color: var(--DarkGrayishCyanOne);
     position: absolute;
-    padding: 0.25rem;
-    padding-left: .5rem;
+    padding: 4%;
 }
 
 .billInput, .peopleInput, .modal {
     color: var(--VeryDarkCyan);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 800;
     text-align: right;
     padding-right: 0.5rem;
@@ -168,7 +167,7 @@ input::-webkit-inner-spin-button {
 }
 
 .tipAmount, .totalAmount, .amountDollar{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--Primary);
     max-width: 100%;
@@ -238,7 +237,8 @@ input::-webkit-inner-spin-button {
 }
 
 .attribution { 
-    font-size: 11px; 
+    margin-top: 2rem;
+    font-size: .5rem; 
     text-align: center; 
 }
 .attribution a { 
